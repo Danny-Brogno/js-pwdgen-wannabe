@@ -32,7 +32,7 @@
 
       #ciao {
         text-align: center;
-        padding-top: 300px;
+        padding-top: 400px;
         color: white;
         font-size: 70px;
         align-self: flex-end;
@@ -45,8 +45,8 @@
 
     <!--__________HTML__________-->
     <header>
-      <h1 id="lol">Vuoi sapere a che età andrai in pensione?</h1>
-      <h2 id="ciao">Vuoi sapere il quale anno andrai in pensione?</h2>
+      <h1 id="lol">Vuoi sapere quante scale fai al giorno?</h1>
+      <h2 id="ciao">Vuoi sapere quante scale fai alla settimana?</h2>
     </header>
     <!--__________END HTML__________-->
 
@@ -58,14 +58,14 @@
     <!---__________JavaScript__________-->
     <script type="text/javascript">
 
-    var
+    var floor = parseInt(prompt("On what floor do you live on?"));
+    var stairsOnEachFloor = 8;
+    var stairsPerDay = stairsOnEachFloor * floor;
+    var stairsPerWeek = stairsPerDay * 7;
 
-
-
-
-
-    console.log()
-    document
+    console.log(floor, stairsPerDay, stairsPerWeek)
+    document.getElementById('lol').innerHTML = stairsPerDay;
+    document.getElementById('ciao').innerHTML = stairsPerWeek;
     // ------------------END OF EXERCISE NUMBER TWO-----------------------------
     </script>
   </body>
