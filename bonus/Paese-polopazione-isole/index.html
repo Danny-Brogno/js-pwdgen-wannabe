@@ -26,16 +26,16 @@
 
       #lol {
         text-align: center;
-        color: white;
+        color: Red;
         font-size: 70px;
       }
 
-      #ciao {
+      #ciao,
+      #lallero {
         text-align: center;
-        padding-top: 400px;
-        color: white;
+        padding-top: 300px;
+        color: green;
         font-size: 70px;
-        align-self: flex-end;
       }
     </style><!---__________END CSS__________-->
 
@@ -45,8 +45,9 @@
 
     <!--__________HTML__________-->
     <header>
-      <h1 id="lol">Vuoi sapere a che età andrai in pensione?</h1>
-      <h2 id="ciao">Vuoi sapere il quale anno andrai in pensione?</h2>
+      <h1 id="lol">Welcome</h1>
+      <h2 id="ciao">Tell us more about where you live</h2>
+      <h3 id="lallero"></h3>
     </header>
     <!--__________END HTML__________-->
 
@@ -58,12 +59,14 @@
     <!---__________JavaScript__________-->
     <script type="text/javascript">
 
-    var  = parseInt(prompt("When were you born?"));
-    var  = ;
+    var birthPlace = prompt("Where were you born?");
+    var population = prompt("How many people live in your country?");
+    var island = prompt("Do you live on an island?");
 
-    console.log();
-    document.getElementById('lol').innerHTML = ;
-    document.getElementById('ciao').innerHTML = ;
+    console.log(birthPlace, population, island);
+    document.getElementById('lol').innerHTML = birthPlace;
+    document.getElementById('ciao').innerHTML = population;
+    document.getElementById('lallero').innerHTML = island;
 
 
     </script>
