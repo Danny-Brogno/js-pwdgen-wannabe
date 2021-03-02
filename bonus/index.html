@@ -20,10 +20,22 @@
         background-color: black;
       }
 
+      header {
+
+      }
+
       #lol {
         text-align: center;
         color: white;
-        font-size: 100px;
+        font-size: 70px;
+      }
+
+      #ciao {
+        text-align: center;
+        padding-top: 300px;
+        color: white;
+        font-size: 70px;
+        align-self: flex-end;
       }
     </style><!---__________END CSS__________-->
 
@@ -32,7 +44,10 @@
 
 
     <!--__________HTML__________-->
-    <h1 id="lol">HELLO WORLD</h1>
+    <header>
+      <h1 id="lol">Vuoi sapere a che età andrai in pensione?</h1>
+      <h2 id="ciao">Vuoi sapere il quale anno andrai in pensione?</h2>
+    </header>
     <!--__________END HTML__________-->
 
 
@@ -45,7 +60,6 @@
 
     //------------------------------1------------------------------------------
 
-
     // var squareBase = parseInt(prompt('Scrivi qui sotto la base'));
     // var squareHeight = parseInt(prompt("Scrivi qui sotto l'altezza"));
     // var area = squareBase * squareHeight;
@@ -57,14 +71,14 @@
 
     //---------------------------2---------------------------------------------
 
-    var year = 2021;
-    var birthYearStr = prompt("Quando sei nato?");
-    var birthYearNumber = parseInt("birthYearStr");
-    var diff = year - birthYearStr;
-
-    console.log(year, birthYearStr, diff);
-
-    document.getElementById('lol').innerHTML = diff;
+    // var year = 2021;
+    // var birthYearStr = prompt("Quando sei nato?");
+    // var birthYearNumber = parseInt("birthYearStr");
+    // var diff = year - birthYearStr;
+    //
+    // console.log(year, birthYearStr, diff);
+    //
+    // document.getElementById('lol').innerHTML = diff;
 
     // -------------------------------3----------------------------------------
 
@@ -75,6 +89,19 @@
     //
     // console.log(name, lastname, favColour, allInfo);
     // document.getElementById('lol').innerHTML = allInfo;
+
+    // --------------------------------4----------------------------------------
+
+    var dateOfBirth = parseInt(prompt("When were you born?"));
+    var currentYear = 2021;
+    var pensionAge = 65;
+    var age = currentYear - dateOfBirth;
+    var yearsToPension = pensionAge - age;
+    var futurePensionYear = currentYear + yearsToPension;
+
+    console.log(dateOfBirth, currentYear, age, yearsToPension, futurePensionYear);
+    document.getElementById('lol').innerHTML = yearsToPension;
+    document.getElementById('ciao').innerHTML = futurePensionYear;
 
     </script>
   </body>
